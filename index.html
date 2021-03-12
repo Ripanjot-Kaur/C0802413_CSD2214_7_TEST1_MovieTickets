@@ -5,21 +5,145 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
+    <link href ="mystyle.css" rel = "stylesheet" type = "text/css" />
+    <script src = "test1.js"></script>
 </head>
 <body>
     <div id ="logo">
         <img src = "logo.jpg">
     </div>
     <h1>My Movie Select</h1>
-    <p> Select the movie you want to watch:</p>
+    <p> select the movie of your choice:</p>
     <div class="movie-container">
         <label>Select a movie</label>
         <select id="movie">
-          <option value="1">Tenet ($12)</option>
-          <option value="2">Twilight ($10)</option>
-          <option value="3">DDLJ ($14)</option>
-          <option value="4">Baby's day out($15)</option>
+          <option value="12">Tenet ($12)</option>
+          <option value="10">Twilight ($10)</option>
+          <option value="14">DDLJ ($14)</option>
+          <option value="15">Baby's day out($15)</option>
         </select>
       </div>
+    <ul class="shows">
+        <li>
+          <div id="seat" class="seat"></div>
+          <small>N/A</small>
+        </li>
+        <li>
+          <div id="seat" class="seat selected"></div>
+          <small>Selected</small>
+        </li>
+        <li>
+          <div id="seat" class="seat occupied"></div>
+          <small>Occupied</small>
+        </li>
+      </ul>
+  
+      <div class="container">
+        <div class="screen"></div>
+  
+        <div class="row">
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+        </div>
+  
+        <div class="row">
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat occupied"></div>
+          <div id="seat" class="seat occupied"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+        </div>
+  
+        <div class="row">
+          <div  id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat occupied"></div>
+          <div id="seat" class="seat occupied"></div>
+        </div>
+  
+        <div class="row">
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+        </div>
+  
+        <div class="row">
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat occupied"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat occupied"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+        </div>
+  
+        <div class="row">
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat occupied"></div>
+          <div id="seat" class="seat occupied"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat"class="seat"></div>
+          <div id="seat" class="seat occupied"></div>
+          <div id="seat" class="seat"></div>
+        </div>
+      </div>
+  
+      <p class="text">
+        You have selected <span id="count">0</span> seats for a price of $<span
+          id="price"
+          >0</span>
+      </p>
+      <a href ="payment.html">
+          <button class = "btn"> Pay </button>
+      </a>
+      <script>
+          var count = 0;
+          var seats = document.getElementsByClassName("seat");
+          for(var i =0;i<seats.length;i++){
+              var order = seats[i];
+              item.addEventListener("click",(event)=>{
+                   var price = document.getElementById("movie").value;
+                   if(!event.target.classList.contains('occupied')&& !event.target.classList.contains('selected')){
+                   count++;
+                   var total = count*price;
+                   event.target.classList.add("selected");
+                   document.getElementById("count").innerText=count;
+                   document.getElementById("total").innerText=total;
+        }
+    })
+}
+      </script>
 </body>
 </html>
