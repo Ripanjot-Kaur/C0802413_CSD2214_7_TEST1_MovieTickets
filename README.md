@@ -2,3 +2,4 @@
 did html page,css,js
 #reference: jotforms
 #reference: code-projects.org
+#seat selection not working
